@@ -1,0 +1,20 @@
+mutation CreateCustomerAccount {
+  createCustomerAccount(
+    input: {
+      firstname: "john"
+      email: "sample@gmail.com"
+      lastname: "david"
+      is_email_optional: true
+    }
+    mobileNumber: "911111111111"
+    otp: "2453"
+    websiteId: 1
+  ) {
+    customer {
+      email
+      firstname
+    }
+    message
+    status
+  }
+}
